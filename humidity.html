@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Visualization Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="portfolio">
+	<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a href="#weather" class="nav-link active" data-toggle="tab">Weather</a>
+    </li>
+    <li class="nav-item">
+        <a href="#data_analysis" class="nav-link" data-toggle="tab">Data Analysis</a>
+	</li>	
+	</ul>
+    
+    <div class="tab-content">
+    	<div class="tab-pane fade show active" id="weather">
+        
+    		<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 nav flex-column nav nav-pills">    
+    		<div class="container">
+        		<a href="index.html" class="navbar-brand mr-3" style="background-color: #0BADA6;">Lattitude</a>
+        		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            		<span class="navbar-toggler-icon"></span>
+        		</button>        
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+        			<div class="navbar-nav ml-auto">
+                		<a href="index.html" class="nav-item nav-link fa fa-home">&nbsp;Summary</a>
+                		<div class="nav-item dropdown">
+                		<!--<a href="#" class="nav-item nav-link fa fa-line-chart  dropdown-toggle">&nbsp;Plots</a>-->
+                			<a href="#" class="nav-link nav-link  active fa fa-line-chart dropdown-toggle" data-toggle="dropdown">&nbsp;Plots</a>
+                    		<div class="dropdown-menu">
+            					<a href="max_temperature.html" class="dropdown-item">Max Temperature</a>
+            					<a href="humidity.html" class="dropdown-item">Humidity</a>
+            					<a href="cloudiness.html" class="dropdown-item">Cloudiness</a>
+                        		<a href="wind_speed.html" class="dropdown-item">Wind Speed</a>
+        					</div>
+    					</div>
+                		<a href="comparisons.html" class="nav-item nav-link fa fa-refresh">&nbsp;Comparison</a>
+                		<a href="data.html" class="nav-item nav-link fa fa-table">&nbsp;Data</a>
+            		</div>    
+        		</div>    
+    		</div>        
+			</nav>        
+ 
+        
+			<div class="container">
+    
+    			<!--Row with two columns divided in 1:3 ratio-->
+    			<div class="row">
+        			<div class="col-lg-7 col-md-12"> <!--<div class="col-lg-9 col-md-6">-->
+                		<div class="jumbotron">
+     						<h2 class="title">vs. Humidity</h2>
+    					    <hr>
+                					<center>
+                                        <img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/Web_Design_Challenge/WebVisualizations/Images/Lat_v_Humidity.png" class="visualization rounded" alt="Humidity">
+                           	    	</center>
+                                		<p>Humidity seems to be independent of latitude. The graphs shows a lot of variety at different latitudes, which leads us to the 
+                                            conclusion that there is no real pattern between humidity and latitude.</p>  
+               			</div>
+           	 		</div>    
+        			<div class="col-lg-5 col-md-12"> <!--<div class="col-lg-3 col-md-3">-->
+                		<div class="jumbotron">
+            				<h3 class="title">Visualizations</h3>
+                	        <hr>
+                            <div class="container">
+                			    <div class="row" style="padding-bottom: 20px">
+                                    <div class="col-6">
+                                        <a href="max_temperature.html">
+                                            <img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/Web_Design_Challenge/WebVisualizations/Images/Lat_v_Temp.png" class="img-thumbnail" alt="Temperature">
+                			            </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="humidity.html">
+                                            <img style="border:5px solid blue" src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/Web_Design_Challenge/WebVisualizations/Images/Lat_v_Humidity.png" class="img-thumbnail" alt="Humidity">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-bottom: 20px">
+                                    <div class="col-6"> 
+                                        <a href="cloudiness.html">        
+                                            <img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/Web_Design_Challenge/WebVisualizations/Images/Lat_v_Clouds.png" class="img-thumbnail" alt="Clouds">
+                			            </a>
+                                    </div>
+                                    <div class="col-6"> 
+                                        <a href="wind_speed.html">    
+                                            <img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/Web_Design_Challenge/WebVisualizations/Images/Lat_v_Wind.png" class="img-thumbnail" alt="Wind">
+            			                </a>
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+            		</div>
+    			</div>
+				<hr>
+    			<footer>
+        			<div class="row">
+            			<div class="col">
+                			<p>UCF Data Analytics and Visualization Bootcamp</p>
+            			</div>
+        			</div>
+    			</footer>
+			</div>
+    	</div>
+        <div class="tab-pane fade" id="data_analysis">
+            <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+    			<!-- Carousel indicators -->
+    			<ol class="carousel-indicators">
+        			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        			<li data-target="#myCarousel" data-slide-to="1"></li>
+        			<li data-target="#myCarousel" data-slide-to="2"></li>
+    			</ol>
+    			<!-- Wrapper for carousel items -->
+    			<div class="carousel-inner">
+        			<div class="carousel-item active">
+            			<img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/data_analysis_class_repo/project1group3/Martie_Files/Images/indeed_jobs_per_industry.png" alt="Jobs by Industry">
+						<div class="carousel-caption d-none d-md-block">
+                			<h5>Jobs per Industry</h5>
+            			</div>
+					</div>
+        			<div class="carousel-item">
+            			<img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/data_analysis_class_repo/project1group3/Martie_Files/Images/indeed_types_of_jobs_per_state.jpg" alt="Job Types by State">
+						<div class="carousel-caption d-none d-md-block">
+                			<h5>Type of Job per State</h5>
+            			</div>
+					</div>
+        			<div class="carousel-item">
+            			<img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/data_analysis_class_repo/project1group3/Martie_Files/Images/stackoverflow_age_distribution.jpg" alt="Age Distribution">
+						<div class="carousel-caption d-none d-md-block">
+                			<h5>Age Distribution</h5>
+            			</div>
+					</div>
+					<div class="carousel-item">
+            			<img src="/Users/feldtmam1/Documents/Data_Analytics_Bootcamp/repos/data_analysis_class_repo/project1group3/Martie_Files/Images/stackoverflow_databases_desired_2019.jpg" alt="Database Desired">
+						<div class="carousel-caption d-none d-md-block">
+                			<h5>Databases Desired</h5>
+            			</div>
+					</div>
+    			</div>
+    			<!-- Carousel controls -->
+    			<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        		<span class="carousel-control-prev-icon"></span>
+    				</a>
+    				<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        		<span class="carousel-control-next-icon"></span>
+    			</a>
+			</div>
+        </div>
+        
+	</div>
+</div>
+</body>
+</html>                            
